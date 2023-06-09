@@ -1,0 +1,66 @@
+	
+
+
+	<!-- FAQs-2 QUESTIONS -->	
+					<div class="faqs-2-questions pc-15">
+						<div class="row">
+
+
+							
+						
+
+							<!-- QUESTIONS HOLDER -->
+							<div class="col-lg-6">
+								<div class="questions-holder pc-10">
+
+	{% for faq_left in faqs_left %}
+
+									<!-- QUESTION #1 -->
+									<div class="question wow fadeInUp" data-wow-delay="0.4s">
+
+										<!-- Question -->
+										<h5 class="h5-sm">{{ faq_left.question }}</h5>
+
+										<!-- Answer -->
+										<p class="p-lg">{{ faq_left.answer }}
+										</p>
+
+									</div>	
+
+	{% endfor %}
+
+								</div>
+							</div>	<!-- END QUESTIONS HOLDER -->
+
+
+							<!-- QUESTIONS HOLDER -->
+							<div class="col-lg-6">
+								<div class="questions-holder pc-10">
+
+					
+	{% for faq_right in faqs_right %}
+									<!-- QUESTION #4 -->					
+									<div class="question wow fadeInUp" data-wow-delay="1s">
+
+										<!-- Question -->
+										<h5 class="h5-sm">{{ faq_right.question }}</h5>
+
+										<!-- Answer -->
+										<p class="p-lg">{{ faq_right.answer }}
+										</p>
+
+									</div>
+
+							
+	{% endfor %}
+
+									
+
+								</div>
+							</div>	<!-- END QUESTIONS HOLDER -->
+
+
+						</div>	<!-- End row -->
+					</div>	<!-- END FAQs-2 QUESTIONS -->	
+
+					

@@ -1,0 +1,219 @@
+{% extends "cms/base.html" %}
+{% load static %}
+{% block main %}
+
+
+			<!-- MORE APPS-1
+			============================================= -->
+			<section id="more-apps-1" class="bg_whitesmoke hero-offset-nav pb-70 moreapps-section division">
+				<div class="container">
+
+
+					<!-- SECTION TITLE -->	
+					<div class="row">	
+						<div class="col-lg-10 offset-lg-1">
+							<div class="section-title text-center mb-70">		
+
+								<!-- Title -->	
+								<h2 class="h2-md">{{tile}}</h2>	
+
+								<!-- Text -->	
+								<p class="p-xl">{{description}}
+								</p>
+									
+							</div>	
+						</div>
+					</div>
+
+
+					<!-- MORE APPS-1 WRAPPER -->	
+					<div class="abox-1-wrapper">
+						<div class="row">
+						
+						<embed type="text/html" src="https://app.a2.software/" width="550" height="550">
+			
+			
+					</div>	   <!-- End container -->
+
+
+				<!-- GEOMETRIC OVERLAY -->	
+				<div class="bg_fixed geometric_overlay"></div>
+
+
+			</section>	<!-- END MORE APPS-1 -->
+
+
+
+
+			<!-- DOWNLOAD-6
+			============================================= -->
+			<section id="download-6" class="bg_mobile wide-100 download-section division">
+				<div class="container white-color">
+					<div class="row">	
+
+
+							<!-- DOWNLOAD TXT -->
+							<div class="col-lg-6">
+								<div class="download-6-txt pl-20 wow fadeInUp" data-wow-delay="0.6s">
+							
+							
+									<!-- STORE BADGES -->
+									<div class="stores-badge">
+							
+										<!-- AppStore -->
+										<a href="https://apps.apple.com/us/app/a2-books/id1596772645" target="_blank" class="store">
+											<img class="appstore" src="{% static 'images/appstore.png' %}" alt="appstore-badge" />
+										</a>
+							
+										<!-- Google Play -->
+										<a href="https://play.google.com/store/apps/details?id=com.a2.books" target="_blank" class="store">
+											<img class="googleplay" src="{% static 'images/googleplay.png' %}" alt="googleplay-badge" />
+										</a>
+							
+										<!-- Aamazon Market 
+																<a href="#" class="store">
+																	<img class="amazon" src="images/amazon.png" alt="amazon-badge" />
+																</a>  -->
+							
+										<!-- Mac AppStore 
+																<a href="#" class="store">
+																	<img class="mac-appstore" src="images/macstore.png" alt="macstore-badge" />
+																</a> -->
+							
+										<!-- Microsoft Store  
+																<a href="#" class="store">
+																	<img class="microsoft" src="images/microsoft.png" alt="microsoft-badge" />
+																</a> -->
+							
+									</div> <!-- END STORE BADGES -->
+							
+								</div>
+							</div> <!-- END DOWNLOAD TXT -->
+
+
+					</div>    <!-- End row -->
+				</div>	   <!-- End container -->	
+			</section>	<!-- END  DOWNLOAD-6 -->
+
+
+
+
+			<!-- TESTIMONIALS-1
+			============================================= -->
+			<section id="reviews-1" class="bg_whitesmoke wide-100 reviews-section division">
+				<div class="container">
+
+
+					<!-- SECTION TITLE -->	
+					<div class="row">	
+						<div class="col-lg-10 offset-lg-1">
+							<div class="section-title text-center mb-60">		
+
+								<!-- Title -->	
+								<h2 class="h2-md">{{tile_1}}</h2>	
+
+								<!-- Text -->	
+								<p class="p-xl">{{description_1}}
+								</p>
+									
+							</div>	
+						</div>
+					</div>
+
+
+					<!-- TESTIMONIALS CONTENT -->
+					<div class="row">
+						<div class="col-md-12">					
+							<div class="owl-carousel owl-theme reviews-1-wrapper">
+
+						{% for testimonial in testimonials %}
+								<!-- TESTIMONIAL #1 -->
+								<div class="review-1 radius-08">
+
+									<!-- App Rating -->
+									<div class="app-rating ico-20 yellow-color">
+										<span class="flaticon-star"></span>
+										<span class="flaticon-star"></span>
+										<span class="flaticon-star"></span>
+										<span class="flaticon-star"></span>
+										<span class="flaticon-star"></span>
+									</div>
+
+									<!-- Title -->
+									<h5 class="h5-sm">{{testimonial.title}}</h5>
+
+									<!-- Testimonial Text -->
+									<div class="review-1-txt">
+
+										<!-- Text -->
+										<p class="p-lg grey-color">{{testimonial.description}}
+										</p>
+
+										<!-- Testimonial Author -->
+										<h5 class="h5-xs"></h5>	
+
+									</div>	
+
+								</div>	<!-- END TESTIMONIAL #1 -->
+						{% endfor %}
+
+
+							
+							</div>
+						</div>									
+					</div>	<!-- END TESTIMONIALS CONTENT --> 
+
+
+				</div>     <!-- End container -->
+			</section>	<!-- END TESTIMONIALS-1 -->
+
+
+
+
+			<!-- NEWSLETTER-1
+			============================================= -->
+			<section id="newsletter-1" class="bg_whitesmoke pb-20 newsletter-section division">
+				<div class="container">
+					<div class="newsletter-wrapper bg-white">
+						<div class="row d-flex align-items-center">
+
+
+							<!-- SECTION TITLE -->	
+							<div class="col-lg-6">
+								<div class="newsletter-txt">	
+
+									<!-- Section ID -->	
+						 			<span class="section-id">Subscrieti</span>
+
+						 			<!-- Title -->	
+									<h4 class="h4-xl">Vreti sa fiti la curent cu ultimele noutati?</h4>	
+
+								</div>								
+							</div>
+
+
+							<!-- NEWSLETTER FORM -->
+							<div class="col-lg-6">
+								<form class="newsletter-form">
+											
+									<div class="input-group">
+										<input type="email" autocomplete="off" class="form-control" placeholder="Adresa de email" required id="s-email">								
+										<span class="input-group-btn">
+											<button type="submit" class="btn btn-md btn-skyblue tra-skyblue-hover">Aboneaza-te</button>
+										</span>										
+									</div>
+
+									<!-- Newsletter Form Notification -->	
+									<label for="s-email" class="form-notification"></label>
+												
+								</form>							
+							</div>	  <!-- END NEWSLETTER FORM -->
+
+
+						</div>	  <!-- End row -->
+					</div>    <!-- End newsletter-holder -->
+				</div>	   <!-- End container -->	
+			</section>	<!-- END NEWSLETTER-1 -->
+
+{% endblock main %}
+

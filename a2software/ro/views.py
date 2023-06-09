@@ -1,13 +1,24 @@
 from django.shortcuts import render
-from .models import HomePage, AboutPage
-
+from .models import HomePage, AboutPage, FaqsPage, AdmFaqs, CookiePage, PlatformPage, WebappePage, Testimonial, Menu
+menu = Menu.objects.filter().first()
 
 # Create your views here.
+
+
+# **************************
+# **************************
+#
+#      home page
+#
+# **************************
+# **************************
 def home(request):
 
     home_page = HomePage.objects.filter().first()
+    
     context = {
         # ***************************** sec 1 *************************** 
+        "menu": menu,
         "tile_1": home_page.t_1_title,
         "subtitle_1": home_page.t_1_subtitle,
         "description_1": home_page.t_1_description,
@@ -68,13 +79,21 @@ def home(request):
     # **************** <!-- NEWSLETTER FORM -->*******************
     # not implemented yet
     }
-    return render(request, "ro/pag/home.html", context)
+    return render(request, "cms/pag/home.html", context)
 
 
+# **************************
+# **************************
+#
+#      about page
+#
+# **************************
+# **************************
 def about(request):
     home_page = HomePage.objects.filter().first()
     about_page = AboutPage.objects.filter().first()
     context = {
+        "menu": menu,
 
          # ****************************** section from home ************************** 
 
@@ -104,9 +123,159 @@ def about(request):
 
         "tile_4": about_page.tile_4,
         "description_4": about_page.description_4,
+    }
+    return render(request, "cms/pag/about.html", context)
 
 
-        # ***************************** sec 3a/b/c/d *************************** 
+
+# **************************
+# **************************
+#
+#      platform page
+#
+# **************************
+# **************************
+def platform(request):
+    platform_page = PlatformPage.objects.filter().first()
+    about_page = AboutPage.objects.filter().first()
+    adm_faqs = AdmFaqs.objects.filter().order_by('-id')[:5:-1]
+    faqs_page = FaqsPage.objects.filter().first()
+   
+    context = {
+        "menu": menu,
+        "tile_0": platform_page.tile_0,
+        "description_0": platform_page.description_0,
+        "description_0_1": platform_page.description_0_1,
+
+        "tile_1": platform_page.tile_1,
+        "tile_1_1": platform_page.tile_1_1,
+        "description_1": platform_page.description_1,
+
+        "tile_2": platform_page.tile_2,
+        "description_2": platform_page.description_2,
+
+        "description_3": platform_page.description_3,
+
+        "tile_4": platform_page.tile_4,
+        "tile_4_1": platform_page.tile_4_1,
+        "description_4": platform_page.description_4,
+
+        "tile_5": platform_page.tile_5,
+        "description_5": platform_page.description_5,
+
+        # external content
+        "tile_about": about_page.tile_0,
+        "description_about": about_page.description_0,
+        "button_question": faqs_page.button_question,
+        "button_name": faqs_page.button_name,
+
+        "faqs": adm_faqs,
+
+
+
 
     }
-    return render(request, "ro/pag/about.html", context)
+    return render(request, "cms/pag/platform.html", context)
+
+# **************************
+# **************************
+#
+#      faqs page
+#
+# **************************
+# **************************
+def faqs(request):
+    faqs_page = FaqsPage.objects.filter().first()
+    adm_faqs = AdmFaqs.objects.all()
+    adm_faqs_left=[]
+    adm_faqs_right=[]
+
+    for adm_faq in list(adm_faqs):
+        if adm_faq.id%2 ==1 :
+            adm_faqs_left.append(adm_faq)
+        else:
+            adm_faqs_right.append(adm_faq)
+
+
+   
+    context = {
+        "menu": menu,
+        "tile_0": faqs_page.tile_0,
+        "description_0": faqs_page.description_0,
+        "faqs_left": adm_faqs_left,
+        "faqs_right": adm_faqs_right,
+        "button_question": faqs_page.button_question,
+        "button_name": faqs_page.button_name,
+        
+    }
+    return render(request, "cms/pag/faqs.html", context)
+
+
+# **************************
+# **************************
+#
+#      cookie page
+#
+# **************************
+# **************************
+def cookie(request):
+    cookie_page = CookiePage.objects.filter().first()
+   
+    context = {
+        "menu": menu,
+        "tile_0": cookie_page.tile_0,
+        "description_0": cookie_page.description_0,
+    }
+    return render(request, "cms/pag/cookie.html", context)
+
+
+# **************************
+# **************************
+#
+#      Webapp page
+#
+# **************************
+# **************************
+def webapp(request):
+    webapp_page = WebappePage.objects.filter().first()
+    testimonials = Testimonial.objects.all()
+
+
+   
+    context = {
+        "menu": menu,
+        "tile": webapp_page.tile_0,
+        "description": webapp_page.description_0,
+
+        "tile_1": webapp_page.tile_1,
+        "description_1": webapp_page.description_1,
+
+        "testimonials" : testimonials
+    }
+    return render(request, "cms/pag/webapp.html", context)
+
+# **************************
+# **************************
+#
+#      contact page
+#
+# **************************
+# **************************
+def contact(request):
+
+   
+    context = {
+        "menu": menu,
+   
+    }
+    return render(request, "cms/pag/contact.html", context)
+
+
+    # **************************
+# **************************
+#
+#      contact page
+#
+# **************************
+# **************************
+

@@ -485,14 +485,13 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-image: url("static/images/geometric_overlay.png");.
+  background-image: url("static/images/geometric_overlay.png");
   height: 665px;
   z-index: -1;
 }
 
 .top_overlay {
-
-  background-image: url("statstatic/images/top_overlay.png");
+  background-image: url("static/images/top_overlay.png");
   height: 48px;
 }
 
@@ -502,18 +501,18 @@ body {
 }
 
 .wave_overlay {
-  background-image: url("static/imagstatic/wave_overlay.png");
+  background-image: url("static/images/wave_overlay.png");
   height: 155px;
 }
 
 .incline_overlay {
-  background-image: url("static/imagstatic/incline_overlay.png");
+  background-image: url("static/images/incline_overlay.png");
   height: 200px;
 }
 
-/*-----------------------------------------static/
+/*------------------------------------------*/
 /*  BORDER SETTINGS FOR DEMOS
-/*-----------------------------------------static/
+/*------------------------------------------*/
 
 .b-border { border: 1px solid #ddd; }
 .b-top { border-top: 1px solid #ddd; }
@@ -521,9 +520,9 @@ body {
 .b-left { border-left: 1px solid #ddd; }
 .b-right { border-right: 1px solid #ddd; }
 
-/*-----------------------------------------static/
+/*------------------------------------------*/
 /*  SECTION DIVIDER
-/*-----------------------------------------static/
+/*------------------------------------------*/
 
 .section-divider {
   display: inline-block;
@@ -559,11 +558,11 @@ body {
 
 /* ==========================================================================
   02. TYPOGRAPHY
-  ===========================================================================static/
+  =========================================================================== */
 
-/*-----------------------------------------static/
+/*------------------------------------------*/
 /*  HEADERS
-/*-----------------------------------------static/
+/*------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {  
   color: #463853;
@@ -572,7 +571,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
 }
 
-/* Header H6static/
+/* Header H6 */
 h6.h6-xs { font-size: 1.0625rem; }   /* 17px */
 h6.h6-sm { font-size: 1.125rem; }    /* 18px */
 h6.h6-md { font-size: 1.15625rem; }  /* 18.5px */
@@ -1395,7 +1394,7 @@ span.os-version {
 .ico-125 [class*="flaticon-"]:before, .ico-125 [class*="flaticon-"]:after { font-size: 7.8125rem; } /* 125px */
 
 /*------------------------------------------*/
-/*   PNG ICONS SETTINGS
+/*  .png" ICONS SETTINGS
 /*------------------------------------------*/ 
 
 .ico-150 img { width: 150px; height: 150px; }
@@ -2458,7 +2457,7 @@ h5.sm-title {
 }
 
 #hero-3 {  
-  background-image: url(static/images/hero-3.jpg);
+  background-image: url("static/images/hero-3.jpg");
   padding-top: 150px;
   padding-bottom: 60px;
   position: relative;
@@ -2466,7 +2465,7 @@ h5.sm-title {
 }
 
 .hero-4-txt {
-  background-image: url(static/images/hero-4.jpg);  
+  background-image: url("static/images/hero-4.jpg");  
   padding-top: 160px;
   padding-bottom: 400px;
 }
@@ -2498,14 +2497,14 @@ h5.sm-title {
 }
 
 #hero-7 {
-  background-image: url(static/images/hero-7.jpg);
+  background-image: url("static/images/hero-7.jpg");
   background-position: bottom center;
   padding-top: 150px;
   padding-bottom: 40px;
 }
 
 #hero-8 {
-  background-image: url(static/images/hero-8.jpg);
+  background-image: url("static/images/hero-8.jpg");
   margin-top: 75px;
   padding-bottom: 35px;
   margin-bottom: 50px;
@@ -2519,7 +2518,7 @@ h5.sm-title {
 }
 
 #hero-10 {
-  background-image: url(static/images/hero-10.jpg);
+  background-image: url("static/images/hero-10.jpg");
   padding-top: 110px;
   padding-bottom: 40px;
   margin-bottom: 50px;
@@ -2534,7 +2533,7 @@ h5.sm-title {
 }
 
 #hero-12 {
-  background-image: url(static/images/hero-12.jpg);
+  background-image: url("static/images/hero-12.jpg");
   padding-top: 130px;
   position: relative;
 }
@@ -5658,7 +5657,7 @@ img.footer-logo {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  background-image: url(static/images/back-to-top.png);
+  background-image: url("static/images/back-to-top.png");
   background-repeat: no-repeat;
   background-position: 50% 48%;
   background-color: rgba(10, 10, 10, .25);

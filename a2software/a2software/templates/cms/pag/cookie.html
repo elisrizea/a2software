@@ -1,0 +1,97 @@
+{% extends "cms/base.html" %}
+{% load static %}
+{% block main %}
+
+			<!-- MORE APPS-1
+			============================================= -->
+			<section id="more-apps-1" class="bg_whitesmoke hero-offset-nav pb-70 moreapps-section division">
+				<div class="container">
+
+
+					<!-- SECTION TITLE -->	
+					<div class="row">	
+						<div class="col-lg-10 offset-lg-1">
+							<div class="section-title text-center mb-70">		
+
+								<!-- Title -->	
+								<h2 class="h2-md">{{ tile_0 }}</h2>	
+
+								<!-- Text -->	
+								
+{% autoescape off %}
+{{ description_0 }}
+{% endautoescape %}
+
+									
+							</div>	
+						</div>
+					</div>
+
+
+					<!-- MORE APPS-1 WRAPPER -->	
+					<div class="abox-1-wrapper">
+						<div class="row">
+						
+					
+			
+			
+					</div>	   <!-- End container -->
+
+
+				<!-- GEOMETRIC OVERLAY -->	
+				<div class="bg_fixed geometric_overlay"></div>
+
+
+			</section>	<!-- END MORE APPS-1 -->
+
+
+
+
+			<!-- DOWNLOAD-6
+			============================================= -->
+			<section id="download-6" class="bg_mobile wide-100 download-section division">
+				<div class="container white-color">
+					<div class="row">	
+
+
+						<!-- DOWNLOAD TXT -->	
+						<div class="col-lg-6">	
+							
+
+										<!-- AppStore -->
+										<a href="https://apps.apple.com/us/app/a2-books/id1596772645" target="_blank" class="store">
+										<img class="appstore" src="{% static 'images/appstore.png' %}" alt="appstore-badge" />
+									</a>
+													
+									<!-- Google Play -->
+									<a href="https://play.google.com/store/apps/details?id=com.a2.books" target="_blank" class="store">
+										<img class="googleplay" src="{% static 'images/googleplay.png' %}" alt="googleplay-badge" />
+									</a> 
+												
+									<!-- Aamazon Market 
+									<a href="#" class="store">
+										<img class="amazon" src="images/amazon.png" alt="amazon-badge" />
+									</a>  -->
+																					
+									<!-- Mac AppStore 
+									<a href="#" class="store">
+										<img class="mac-appstore" src="images/macstore.png" alt="macstore-badge" />
+									</a> --> 
+																					
+									<!-- Microsoft Store  
+									<a href="#" class="store">
+										<img class="microsoft" src="images/microsoft.png" alt="microsoft-badge" />
+									</a> --> 
+							
+								</div>	<!-- END STORE BADGES -->	
+
+							</div>
+						</div>	<!-- END DOWNLOAD TXT -->	
+
+
+					</div>    <!-- End row -->
+				</div>	   <!-- End container -->	
+			</section>	<!-- END  DOWNLOAD-6 -->
+
+{% endblock main %}
+
