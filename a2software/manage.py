@@ -2,19 +2,16 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+
 from a2software.settings.base import *
 
 
 def main():
     """drfecomerce"Run administrative tasks."""
     if DEBUG:
-        os.environ.setdefault(
-            "DJANGO_SETTINGS_MODULE", "a2software.settings.dev"
-        )
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "a2software.settings.dev")
     else:
-        os.environ.setdefault(
-            "DJANGO_SETTINGS_MODULE", "a2software.settings.prod"
-        )
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "a2software.settings.prod")
 
     try:
         from django.core.management import execute_from_command_line

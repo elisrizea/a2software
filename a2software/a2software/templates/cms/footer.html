@@ -17,7 +17,7 @@
 								<img class="footer-logo mb-25" src="{% static 'images/1024.png' %}" alt="footer-logo">
 
 								<!-- Text -->	
-								<p class="p-md">Ai ceva de spus si cauti o platforma care sa te ajute sa iti dezvolti propriul tau brand? Esti in locul potrivit.
+								<p class="p-md">{{m.f_moto_description}}
 								</p>
 
 							</div>	
@@ -29,14 +29,13 @@
 							<div class="footer-links mb-40">
 							
 								<!-- Title -->
-								<h5 class="h5-xs">Companie</h5>
+								<h5 class="h5-xs">{{m.f_company_title}}</h5>
 
 								<!-- Footer Links -->
 								<ul class="foo-links clearfix">
-									<li><p class="p-md"><a href="?despre-noi">Despre Noi</a></p></li>
-									<li><p class="p-md"><a href="?partener">Parteneri</a></p></li>
-									<li><p class="p-md"><a href="?cookie">T&C</a></p></li>
-									<li><p class="p-md"><a href="#">GDPR</a></p></li>								
+									<li><p class="p-md"><a href="{% url 'about' %}">{{m.m_about}}</a></p></li>
+									<li><a href="{% url 'cookie' %}">{{m.m_coockie}}</a></li>
+									<li><p class="p-md"><a href="https://gdpr-info.eu/" target="_blank">GDPR</a></p></li>								
 								</ul>
 
 							</div>
@@ -48,15 +47,14 @@
 							<div class="footer-links mb-40">
 												
 								<!-- Title -->
-								<h5 class="h5-xs">Informatii</h5>
+								<h5 class="h5-xs">{{m.f_info_title}}</h5>
 
 								<!-- Footer List -->
 								<ul class="foo-links clearfix">
-								<li><p class="p-md"><a href="?despre-noi">Despre Noi</a></p></li>	
+								<li><p class="p-md"><a href="{% url 'platform' %}">{{m.m_platform}}</a></p></li>	
 
-									<li><p class="p-md"><a href="?platforma-noastra">Platforma</a></p></li>
-									<li><p class="p-md"><a href="?webapp">Asculta-ne</a></p></li>	
-								<li><p class="p-md"><a href="?faqs">FAQ</a></p></li>								
+									<li><p class="p-md"><a href="{% url 'webapp' %}">{{m.m_webapp}}</a></p></li>	
+								<li><p class="p-md"><a href="{% url 'faqs' %}">{{m.m_faqs}}</a></p></li>								
 								</ul>
 
 							</div>	
@@ -87,12 +85,12 @@
 							<div class="footer-links mb-40">
 							
 								<!-- Title -->
-								<h5 class="h5-xs">Suport</h5>
+								<h5 class="h5-xs">{{m.f_support_title}}</h5>
 
 								<!-- Footer Links -->
 								<ul class="foo-links clearfix">
-									<li><p class="p-md"><a href="?contact">Contact</a></p></li>
-									<li><p class="p-md"><a href="#">Harta Site</a></p></li>																
+									<li><p class="p-md"><a href="{% url 'contact' %}">{{m.m_contact}}</a></p></li>
+																							
 																
 								</ul>
 
@@ -119,10 +117,9 @@
 							<!-- BOTTOM FOOTER LINKS -->
 							<div class="col-md-6">
 								<ul class="bottom-footer-list text-right clearfix">
-									<li class="first-li"><a href="#">Facebook</a></li>	
-									<li><a href="#">Twitter</a></li>
-									<li><a href="#">LinkedIn</a></li>		
-									<li class="last-li"><a href="#">Dribbble</a></li>
+									<li class="first-li"><a href="https://www.facebook.com/BibliotecaLigiei/">Facebook</a></li>
+									<li><a href="https://www.linkedin.com/in/alin-rizea-b10368104/" target="_blank">LinkedIn</a></li>		
+									<li class="last-li"><a href="https://github.com/elisrizea" target="_blank">GitHub</a></li>
 								</ul>
 							</div>
 

@@ -41,12 +41,12 @@
 								   
 						<ul class="wsmenu-list nav-rose-hover">
 <!-- SIMPLE NAVIGATION LINK -->
-							<li class="nl-simple" aria-haspopup="true"><a href="{% url 'home' %}">{{menu.home}} </a></li>
+							<li class="nl-simple" aria-haspopup="true"><a href="{% url 'home' %}">{{m.m_home}}</a></li>
 
 
 
 <!-- SIMPLE NAVIGATION LINK -->
-<li class="nl-simple" aria-haspopup="true"><a href="{% url 'about' %}">{{menu.about}}</a></li>
+<li class="nl-simple" aria-haspopup="true"><a href="{% url 'about' %}">{{m.m_about}}</a></li>
 
 					
 
@@ -68,24 +68,24 @@
 
 							<!-- DROPDOWN MENU -->
 							<li aria-haspopup="false">
-							    <a href="{% url 'platform' %}">{{menu.platform}}<span class="wsarrow"></span></a>
+							    <a href="{% url 'platform' %}">{{m.m_platform}}<span class="wsarrow"></span></a>
 								<div class="wsmegamenu clearfix halfmenu">
 									  <div class="container-fluid">
 										<div class="row">
 
 											<!-- Links -->
 											<ul class="col-lg-6 link-list">	
-											<li><a href="#" onClick="myFunction2()" >{{menu.store}}</a>
+											<li><a href="#" onClick="myFunction2()" >{{m.m_store}}</a>
 							</li> 
 <script>
 function myFunction2() {
   window.open("https://store.a2.software/ro/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=20,left=50,width=1200,height=600");
 }
 </script></li>
-												<li><a href="{% url 'webapp' %}">{{menu.webapp}}</a></li>
-												<li><a href="{% url 'platform' %}">{{menu.platform}}</a></li>
-												<li><a href="{% url 'faqs' %}">{{menu.faqs}}</a></li>
-												<li><a href="{% url 'cookie' %}">{{menu.cookie}}</a></li>
+												<li><a href="{% url 'webapp' %}">{{m.m_webapp}}</a></li>
+												<li><a href="{% url 'platform' %}">{{m.m_platform}}</a></li>
+												<li><a href="{% url 'faqs' %}">{{m.m_faqs}}</a></li>
+												<li><a href="{% url 'cookie' %}">{{m.m_coockie}}</a></li>
 											
 											</ul>
 
@@ -103,7 +103,7 @@ function myFunction2() {
 
 
 							<!-- SIMPLE NAVIGATION LINK --> 
-							<li class="nl-simple" aria-haspopup="true"><a href="{% url 'contact' %}">{{menu.contact}}</a></li>
+							<li class="nl-simple" aria-haspopup="true"><a href="{% url 'contact' %}">{{m.m_contact}}</a></li>
 
 
 							
@@ -111,7 +111,7 @@ function myFunction2() {
 
 							<!-- HEADER BUTTON -->
 							<li class="nl-simple" aria-haspopup="true">
-								<a href="#" onClick="myFunction()" class="btn btn-rose tra-rose-hover last-link">{{menu.partner}}</a>
+								<a href="#" onClick="myFunction()" class="btn btn-rose tra-rose-hover last-link">{{m.m_partner}}</a>
 							</li> 
 							<li> 
 							<a href="https://a2.software/en/"> <p><img src="https://a2.software/ro/images/uk.png" alt="english Language" width="50" height="25">English</p></a>
