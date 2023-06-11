@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+from .forms import ContactPageForm
 from .models import (
     HomePage,
     AboutPage,
@@ -10,6 +11,7 @@ from .models import (
     WebappePage,
     Testimonial,
     BaseHeaderFooterMenu,
+    ContactPage,
 )
 
 header_footer_menu = BaseHeaderFooterMenu.objects.filter().first()
@@ -224,7 +226,20 @@ def webapp(request):
 # **************************
 # **************************
 def contact(request):
+    contact_page = ContactPage.objects.filter().first()
+    sent = False
+    add_post_form = ContactPageForm(request.POST or None)
+    if add_post_form.is_valid():
+        add_post_form.save()
+        sent = True
+        add_post_form = ContactPageForm()
+    else:
+        sent = False
+
     context = {
         "m": header_footer_menu,
+        "status": sent,
+        "contact_page": contact_page,
+        "add_post_form": add_post_form,
     }
     return render(request, "cms/pag/contact.html", context)

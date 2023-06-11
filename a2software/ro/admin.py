@@ -9,6 +9,8 @@ from .models import (
     WebappePage,
     Testimonial,
     BaseHeaderFooterMenu,
+    ContactPage,
+    Emails,
 )
 
 # Register your models here.
@@ -21,3 +23,5 @@ admin.site.register(PlatformPage)
 admin.site.register(WebappePage)
 admin.site.register(Testimonial)
 admin.site.register(BaseHeaderFooterMenu)
+admin.site.register(ContactPage)
+admin.site.register(Emails)

@@ -225,3 +225,50 @@ class BaseHeaderFooterMenu(models.Model):
 
     def __str__(self):
         return "edit Header Footer Menu"
+
+
+# ***************************** Contact ***************************
+class ContactPage(models.Model):
+    class Meta:
+        verbose_name = "Pages : Contact"
+        verbose_name_plural = "Pages : Contact"
+
+    form_subject_tag = models.CharField(max_length=150, null=False, blank=False)
+    form_subject_tag2 = models.CharField(max_length=150, null=False, blank=False)
+    form_subject_hint = models.CharField(max_length=150, null=False, blank=False)
+
+    form_name_tag = models.CharField(max_length=150, null=False, blank=False)
+    form_name_tag2 = models.CharField(max_length=150, null=False, blank=False)
+    form_name_hint = models.CharField(max_length=150, null=False, blank=False)
+
+    form_email_tag = models.CharField(max_length=150, null=False, blank=False)
+    form_email_tag2 = models.CharField(max_length=150, null=False, blank=False)
+    form_email_hint = models.CharField(max_length=150, null=False, blank=False)
+
+    form_phone_tag = models.CharField(max_length=150, null=False, blank=False)
+    form_phone_tag2 = models.CharField(max_length=150, null=False, blank=False)
+    form_phone_hint = models.CharField(max_length=150, null=False, blank=False)
+
+    form_message_tag = models.CharField(max_length=150, null=False, blank=False)
+    form_message_tag2 = models.CharField(max_length=150, null=False, blank=False)
+    form_message_hint = models.CharField(max_length=150, null=False, blank=False)
+
+    button_name = models.CharField(max_length=150, null=False, blank=False)
+    welcome = models.CharField(max_length=150, null=False, blank=False)
+    success = models.CharField(max_length=150, null=False, blank=False)
+
+
+# ***************************** Emails ***************************
+class Emails(models.Model):
+    class Meta:
+        verbose_name = "Emails"
+        verbose_name_plural = "Emails"
+
+    form_subject = models.CharField(max_length=150, blank=False, null=False)
+    form_email = models.CharField(max_length=150, blank=False, null=False)
+    form_name = models.CharField(max_length=150, blank=False, null=False)
+    form_phone = models.CharField(max_length=150, blank=False, null=False)
+    form_message = models.TextField(blank=False, null=False)
+
+    def __str__(self):
+        return self.form_email

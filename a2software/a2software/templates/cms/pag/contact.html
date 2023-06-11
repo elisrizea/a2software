@@ -16,7 +16,14 @@
 							<div class="section-title text-center mb-70">		
 
 								<!-- Title -->	
-								<h2 class="h2-md">Cu ce te putem ajuta?</h2>	
+								<h2 class="h2-md" >{% if not status %}
+								{{contact_page.welcome}}
+								</h2>
+								{% else %}
+								<h2 class="h2-md" style="color:green;"  >
+								{{contact_page.success}}
+								
+								{% endif %}</h2>	
 
 								<!-- Text -->	
 								<p class="p-xl">
@@ -31,12 +38,23 @@
 				 	<div class="row">
 				 		<div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
 				 			<div class="form-holder">
-								<form name="contact-form" class="row contact-form">
+								<form name="contact" name="contact" method="post" class="row contact-form">
+
+								{% csrf_token %}
+								
+								{% load widget_tweaks %}
+								
+
 
 									<!-- Form Select -->
 									<div id="input-subject" class="col-md-12 input-subject">
-										<p class="p-lg">Ai o intrebare despre: </p>
-										<span>Alege o sectiune: </span>
+										
+										<p class="p-lg">{{contact_page.form_subject_tag}}</p>
+										<span>{{contact_page.form_subject_tag2}} </span>
+									{% render_field add_post_form.form_subject class+="form-control name" placeholder=contact_page.form_subject_hint %}
+											
+										<br><br>
+										<!-- Form Select
 										<select id="inlineFormCustomSelect1" name="Subject" class="custom-select subject">
 									    		<option>Utilizare Platforma</option>
 											<option>Inregistrare/Activare cont nou</option>
@@ -44,28 +62,39 @@
 											<option>Probleme si Erori</option>
 											<option>Informatii financiare</option>
 											<option>Altele</option>
-									    </select>
+									    </select>-->
 									</div>
 																						
 									<!-- Contact Form Input -->
 									<div id="input-name" class="col-md-12">
-										<p class="p-lg">Numele dumneavoastra: </p>
-										<span>Va rugam introduceti numele real: </span>
-										<input type="text" name="name" class="form-control name" placeholder="Your Name*"> 
+										<p class="p-lg">{{contact_page.form_name_tag}} </p>
+										<span>{{contact_page.form_name_tag2}} </span>
+										{% render_field add_post_form.form_name class+="form-control name" placeholder=contact_page.form_name_hint %}
+									
 									</div>
 												
 									<div id="input-email" class="col-md-12">
-										<p class="p-lg">Adresa de email: </p>
-										<span>Verificati cu atentie adresa de email</span>
-										<input type="text" name="email" class="form-control email" placeholder="Email Address*"> 
+										<p class="p-lg">{{contact_page.form_email_tag}} </p>
+										<span>{{contact_page.form_email_tag2}}</span>
+										{% render_field add_post_form.form_email class+="form-control name" placeholder=contact_page.form_email_hint %}
+										
+									</div>
+
+									<div id="input-phone" class="col-md-12">
+										<p class="p-lg">{{contact_page.form_phone_tag}} </p>
+										<span>{{contact_page.form_phone_tag2}}</span>
+										{% render_field add_post_form.form_phone class+="form-control name" placeholder=contact_page.form_phone_hint %}
+										
 									</div>
 		
-									<div id="input-message" class="col-md-12 input-message">
-										<p class="p-lg">Detaliati intrebarea dumneavoastra: </p>
+									<div id="input-message" class="col-md-12">
+									<p class="p-lg">{{contact_page.form_message_tag}} </p>
+									<span>{{contact_page.form_message_tag2}}</span>
+											{% render_field add_post_form.form_message class+="form-control name" placeholder=contact_page.form_message_hint %}
 										
-										<textarea class="form-control message" name="message" rows="6" placeholder="Am o intrebare despre..."></textarea>
-									</div> 
-																						
+										</div> 
+									
+																							
 									<!-- Contact Form Button -->
 									<div class="col-md-12 mt-15 form-btn text-right">	
 										<button type="submit" class="btn btn-skyblue tra-skyblue-hover submit">Trimite Intrebare</button>	
@@ -75,7 +104,7 @@
 									<div class="col-lg-12 contact-form-msg">
 										<span class="loading"></span>
 									</div>	
-																							
+									
 								</form>	
 				 			</div>	
 				 		</div>	
